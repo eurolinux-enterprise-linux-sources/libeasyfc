@@ -1,0 +1,101 @@
+0.12.1 -> 0.13.0
+===================
+* Enhancement:
+  * Python3 support
+* Bug Fix:
+  * Fix "no such fonts available" error
+
+0.12 -> 0.12.1
+=================
+* Minor bug fix with the latest gobject-introspection.
+
+0.11 -> 0.12
+===============
+* Enhancement
+  * Add feature tags support
+
+0.10 -> 0.11
+===============
+* Bug Fixes
+  * Get rid of the limitation of antialias v.s. embedded bitmap
+  * Fix the unexpected error when a font has a family name in the native language at first place
+* Enhancement:
+  * Add the font substitution support.
+
+0.9 -> 0.10
+==============
+* Bug Fixes
+  * Fix bashism
+  * Fix broken pkgconfig files.
+  * Fix build issues when srcdir != builddir.
+  * Do not remove the old file if the place to it is a symlink.
+
+0.8 -> 0.9
+=============
+* Enhancements:
+  * support the boolean value modification
+    * hinting, autohint, antialias, embeddedbitmap
+  * sub-pixel rendering support
+  * hintstyle support
+
+0.7 -> 0.8
+=============
+* Enhancements:
+  * support fontconfig (pre) 2.10
+    * XDG Base Directory Specification
+    * localized font name
+  * sFamilyClass support
+  * Add an API to migrate the config path.
+
+0.6 -> 0.7
+=============
+* Enhancements:
+  * separate fonts related APIs to ezfc_font_t.
+  * Add an API to analize the alias name from FcPattern.
+  * Add an API to store the xml data into the buffer.
+  * Allow a font configuration for any languages.
+  * Improve the font variants detection.
+  * Update docs.
+
+0.5 -> 0.6
+=============
+* Bug Fix:
+  * Fix typos in sample code.
+* Enhancements:
+  * Improve the monospaced fonts detection.
+  * Update docs
+
+0.4 -> 0.5
+=============
+* Bug Fixes:
+  * Fix crash issues.
+  * Fix annotation for the gobject-introspection.
+  * Fix the type of the output.
+  * Workaround to match with ll-cc too.
+* Enhancements:
+  * Add an API to remove all of the aliases for a language.
+
+0.3 -> 0.4
+=============
+* Bug Fixes:
+  * Fix a memory leak.
+  * Fix a glib error on unreferencing.
+  * Fix a typo in the document.
+
+0.2 -> 0.3
+=============
+* Enhancements:
+  * Add APIs to obtain the fonts list for alias.
+* Bug Fixes:
+  * Remove the configuration file if no elements available.
+  * Deal with sans as sans-serif.
+
+0.1 -> 0.2
+=============
+* Enhancements:
+  * Add an API to set a priority.
+  * Add an API to set an extra name.
+  * Add documentations.
+* Bug Fixes:
+  * Fix the wrong filename to load.
+

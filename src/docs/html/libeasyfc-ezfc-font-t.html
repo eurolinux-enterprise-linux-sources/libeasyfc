@@ -1,0 +1,1261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ezfc_font_t</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="libeasyfc Documentation">
+<link rel="up" href="ch01.html" title="libeasyfc API References">
+<link rel="prev" href="libeasyfc-ezfc-error-t.html" title="ezfc_error_t">
+<link rel="next" href="libeasyfc-Utilities.html" title="Utilities">
+<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libeasyfc-ezfc-error-t.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libeasyfc Documentation</th>
+<td><a accesskey="n" href="libeasyfc-Utilities.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libeasyfc-ezfc-font-t.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libeasyfc-ezfc-font-t.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libeasyfc-ezfc-font-t"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libeasyfc-ezfc-font-t.top_of_page"></a>ezfc_font_t</span></h2>
+<p>ezfc_font_t — A class for managing the font properties</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libeasyfc-ezfc-font-t.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-add-family" title="ezfc_font_add_family ()">ezfc_font_add_family</a>                (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *font_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-add-feature" title="ezfc_font_add_feature ()">ezfc_font_add_feature</a>               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *feature</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-canonicalize" title="ezfc_font_canonicalize ()">ezfc_font_canonicalize</a>              (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-check-existence" title="ezfc_font_check_existence ()">ezfc_font_check_existence</a>           (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-find" title="ezfc_font_find ()">ezfc_font_find</a>                      (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *font_name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-alias-name-from-pattern" title="ezfc_font_get_alias_name_from_pattern ()">ezfc_font_get_alias_name_from_pattern</a>
+                                                        (<em class="parameter"><code>const <span class="type">FcPattern</span> *pattern</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-antialiasing" title="ezfc_font_get_antialiasing ()">ezfc_font_get_antialiasing</a>          (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-autohinting" title="ezfc_font_get_autohinting ()">ezfc_font_get_autohinting</a>           (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-available-features" title="ezfc_font_get_available_features ()">ezfc_font_get_available_features</a>    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-embedded-bitmap" title="ezfc_font_get_embedded_bitmap ()">ezfc_font_get_embedded_bitmap</a>       (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-families" title="ezfc_font_get_families ()">ezfc_font_get_families</a>              (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-family" title="ezfc_font_get_family ()">ezfc_font_get_family</a>                (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-features" title="ezfc_font_get_features ()">ezfc_font_get_features</a>              (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-hinting" title="ezfc_font_get_hinting ()">ezfc_font_get_hinting</a>               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+<a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-hintstyle-t" title="enum ezfc_font_hintstyle_t"><span class="returnvalue">ezfc_font_hintstyle_t</span></a> <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-hintstyle" title="ezfc_font_get_hintstyle ()">ezfc_font_get_hintstyle</a>           (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-list" title="ezfc_font_get_list ()">ezfc_font_get_list</a>                  (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> localized_font_name</code></em>);
+<span class="returnvalue">FcPattern</span> *         <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-pattern" title="ezfc_font_get_pattern ()">ezfc_font_get_pattern</a>               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-pattern-list" title="ezfc_font_get_pattern_list ()">ezfc_font_get_pattern_list</a>          (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-rgba" title="ezfc_font_get_rgba ()">ezfc_font_get_rgba</a>                  (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+<a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-subpixel-render-t" title="enum ezfc_font_subpixel_render_t"><span class="returnvalue">ezfc_font_subpixel_render_t</span></a> <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-subpixel-rendering" title="ezfc_font_get_subpixel_rendering ()">ezfc_font_get_subpixel_rendering</a>
+                                                        (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+enum                <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-hintstyle-t" title="enum ezfc_font_hintstyle_t">ezfc_font_hintstyle_t</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-is-alias-font" title="ezfc_font_is_alias_font ()">ezfc_font_is_alias_font</a>             (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);
+<a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="returnvalue">ezfc_font_t</span></a> *       <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-new" title="ezfc_font_new ()">ezfc_font_new</a>                       (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="returnvalue">ezfc_font_t</span></a> *       <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-ref" title="ezfc_font_ref ()">ezfc_font_ref</a>                       (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-remove" title="ezfc_font_remove ()">ezfc_font_remove</a>                    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-remove-family" title="ezfc_font_remove_family ()">ezfc_font_remove_family</a>             (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *font_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-remove-feature" title="ezfc_font_remove_feature ()">ezfc_font_remove_feature</a>            (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *feature</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-set-antialiasing" title="ezfc_font_set_antialiasing ()">ezfc_font_set_antialiasing</a>          (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-set-autohinting" title="ezfc_font_set_autohinting ()">ezfc_font_set_autohinting</a>           (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-set-embedded-bitmap" title="ezfc_font_set_embedded_bitmap ()">ezfc_font_set_embedded_bitmap</a>       (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-set-family" title="ezfc_font_set_family ()">ezfc_font_set_family</a>                (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *font_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-set-hinting" title="ezfc_font_set_hinting ()">ezfc_font_set_hinting</a>               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-set-hintstyle" title="ezfc_font_set_hintstyle ()">ezfc_font_set_hintstyle</a>             (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-hintstyle-t" title="enum ezfc_font_hintstyle_t"><span class="type">ezfc_font_hintstyle_t</span></a> hintstyle</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-set-pattern" title="ezfc_font_set_pattern ()">ezfc_font_set_pattern</a>               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">FcPattern</span> *pattern</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-set-rgba" title="ezfc_font_set_rgba ()">ezfc_font_set_rgba</a>                  (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> val</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-set-subpixel-rendering" title="ezfc_font_set_subpixel_rendering ()">ezfc_font_set_subpixel_rendering</a>    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-subpixel-render-t" title="enum ezfc_font_subpixel_render_t"><span class="type">ezfc_font_subpixel_render_t</span></a> mode</code></em>);
+enum                <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-subpixel-render-t" title="enum ezfc_font_subpixel_render_t">ezfc_font_subpixel_render_t</a>;
+                    <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t">ezfc_font_t</a>;
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-unref" title="ezfc_font_unref ()">ezfc_font_unref</a>                     (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="libeasyfc-ezfc-font-t.description"></a><h2>Description</h2>
+<p>
+This class provides an easy access to the font properties
+</p>
+</div>
+<div class="refsect1">
+<a name="libeasyfc-ezfc-font-t.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="ezfc-font-add-family"></a><h3>ezfc_font_add_family ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_add_family                (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *font_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Add <em class="parameter"><code>font_name</code></em> as the font family name used for the font font.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font_name</code></em> :</span></p></td>
+<td>a font name.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it successfully is set. otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-add-feature"></a><h3>ezfc_font_add_feature ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_add_feature               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *feature</code></em>);</pre>
+<p>
+Add <em class="parameter"><code>feature</code></em> font feature to <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>feature</code></em> :</span></p></td>
+<td>feature name to be added</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully completed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-canonicalize"></a><h3>ezfc_font_canonicalize ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             ezfc_font_canonicalize              (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Split up <em class="parameter"><code>font</code></em> to <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> that has one family name only.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> contains
+<a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ezfc_font_t]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-check-existence"></a><h3>ezfc_font_check_existence ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_font_check_existence           (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);</pre>
+<p>
+Set a flag whether checking the font existence when invoking
+<a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-set-family" title="ezfc_font_set_family ()"><code class="function">ezfc_font_set_family()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flag</code></em> :</span></p></td>
+<td>a boolean value.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-find"></a><h3>ezfc_font_find ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_find                      (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *font_name</code></em>);</pre>
+<p>
+Check if <em class="parameter"><code>font</code></em> contains <em class="parameter"><code>font_name</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font_name</code></em> :</span></p></td>
+<td>a font name.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it contains, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-alias-name-from-pattern"></a><h3>ezfc_font_get_alias_name_from_pattern ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             ezfc_font_get_alias_name_from_pattern
+                                                        (<em class="parameter"><code>const <span class="type">FcPattern</span> *pattern</code></em>);</pre>
+<p>
+Analize <em class="parameter"><code>pattern</code></em> and returns a alias name string according to the result.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pattern</code></em> :</span></p></td>
+<td>a <span class="type">FcPattern</span>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> containing
+a static string for the alias name. <span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-antialiasing"></a><h3>ezfc_font_get_antialiasing ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_get_antialiasing          (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Obtain a boolean value about the anti-aliasing usage in <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the antialiasing is enabled. otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-autohinting"></a><h3>ezfc_font_get_autohinting ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_get_autohinting           (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Obtain a boolean value about the auto-hinting usage in <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the auto-hinting is enabled. otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-available-features"></a><h3>ezfc_font_get_available_features ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             ezfc_font_get_available_features    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Obtains available font features in <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> containing
+memory-allocated string of feature name that is available
+in <em class="parameter"><code>font</code></em>. strings in <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> has to be freed when it isn't
+needed anymore. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-embedded-bitmap"></a><h3>ezfc_font_get_embedded_bitmap ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_get_embedded_bitmap       (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Obtain a boolean value about the embedded bitmap usage in <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the embedded bitmap is enabled, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-families"></a><h3>ezfc_font_get_families ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             ezfc_font_get_families              (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Obtains font family names in <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> containing
+the static string of font family names. <span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-family"></a><h3>ezfc_font_get_family ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       ezfc_font_get_family                (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Obtains the font family name in first place in <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the font name.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-features"></a><h3>ezfc_font_get_features ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             ezfc_font_get_features              (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Obtains font features list that <em class="parameter"><code>font</code></em> has.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> containing
+the static string of feature name. <span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-hinting"></a><h3>ezfc_font_get_hinting ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_get_hinting               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Obtain a boolean value about the hinting usage in <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the hinting is enabled. otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-hintstyle"></a><h3>ezfc_font_get_hintstyle ()</h3>
+<pre class="programlisting"><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-hintstyle-t" title="enum ezfc_font_hintstyle_t"><span class="returnvalue">ezfc_font_hintstyle_t</span></a> ezfc_font_get_hintstyle           (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Obtain the hintstyle in <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-hintstyle-t" title="enum ezfc_font_hintstyle_t"><span class="type">ezfc_font_hintstyle_t</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-list"></a><h3>ezfc_font_get_list ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             ezfc_font_get_list                  (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> localized_font_name</code></em>);</pre>
+<p>
+Obtains the fonts list being assigned to <em class="parameter"><code>alias_name</code></em> for <em class="parameter"><code>language</code></em>.
+</p>
+<p>
+Note that <em class="parameter"><code>localized_font_name</code></em> doesn't take effect yet. this is just
+a reservation for future improvement.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>language</code></em> :</span></p></td>
+<td>the language name fontconfig can deal with. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias_name</code></em> :</span></p></td>
+<td>the alias name to obtain the fonts list for. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>localized_font_name</code></em> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to include the localized font name if available,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> for English font name only.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> contains the font family name.
+if no valid families, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> then. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-pattern"></a><h3>ezfc_font_get_pattern ()</h3>
+<pre class="programlisting"><span class="returnvalue">FcPattern</span> *         ezfc_font_get_pattern               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Obtains <span class="type">FcPattern</span> in <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a duplicate of <span class="type">FcPattern</span> in the instance. it has to be freed.
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>font</code></em> doesn't have any font pattern.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-pattern-list"></a><h3>ezfc_font_get_pattern_list ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             ezfc_font_get_pattern_list          (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);</pre>
+<p>
+Obtains <span class="type">FcPattern</span> list being assigned to <em class="parameter"><code>alias_name</code></em> for <em class="parameter"><code>language</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>language</code></em> :</span></p></td>
+<td>the language name fontconfig can deal with. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias_name</code></em> :</span></p></td>
+<td>the alias name to obtain the fonts pettern list for. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> contains <span class="type">FcPattern</span>, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> FcPattern][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-rgba"></a><h3>ezfc_font_get_rgba ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                ezfc_font_get_rgba                  (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Obtains current sub-pixel ordering in <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the sub-pixel ordering value in the integer.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-get-subpixel-rendering"></a><h3>ezfc_font_get_subpixel_rendering ()</h3>
+<pre class="programlisting"><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-subpixel-render-t" title="enum ezfc_font_subpixel_render_t"><span class="returnvalue">ezfc_font_subpixel_render_t</span></a> ezfc_font_get_subpixel_rendering
+                                                        (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Obtain current status about the sub-pixel rendering in <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>current mode in the sub-pixel rendering.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-hintstyle-t"></a><h3>enum ezfc_font_hintstyle_t</h3>
+<pre class="programlisting">typedef enum {
+	EZFC_FONT_HINTSTYLE_UNKNOWN = 0,
+	EZFC_FONT_HINTSTYLE_NONE,
+	EZFC_FONT_HINTSTYLE_SLIGHT,
+	EZFC_FONT_HINTSTYLE_MEDIUM,
+	EZFC_FONT_HINTSTYLE_FULL,
+	EZFC_FONT_HINTSTYLE_END
+} ezfc_font_hintstyle_t;
+</pre>
+<p>
+The hintstyle option to be used for <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-set-hintstyle" title="ezfc_font_set_hintstyle ()"><code class="function">ezfc_font_set_hintstyle()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><a name="EZFC-FONT-HINTSTYLE-UNKNOWN:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_HINTSTYLE_UNKNOWN</code></span></p></td>
+<td>unknown state in the hintstyle.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-FONT-HINTSTYLE-NONE:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_HINTSTYLE_NONE</code></span></p></td>
+<td>No use of autohinting
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-FONT-HINTSTYLE-SLIGHT:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_HINTSTYLE_SLIGHT</code></span></p></td>
+<td>Use slight autohinting
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-FONT-HINTSTYLE-MEDIUM:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_HINTSTYLE_MEDIUM</code></span></p></td>
+<td>Use medium autohinting
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-FONT-HINTSTYLE-FULL:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_HINTSTYLE_FULL</code></span></p></td>
+<td>Use full autohinting
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-FONT-HINTSTYLE-END:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_HINTSTYLE_END</code></span></p></td>
+<td>No real value, but just a terminator.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-is-alias-font"></a><h3>ezfc_font_is_alias_font ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_is_alias_font             (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);</pre>
+<p>
+Checks if <em class="parameter"><code>alias_name</code></em> is one of sans-serif, serif, monospace, cursive or fantasy.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias_name</code></em> :</span></p></td>
+<td>the alias font name</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>alias_name</code></em> is an alias font name, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-new"></a><h3>ezfc_font_new ()</h3>
+<pre class="programlisting"><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="returnvalue">ezfc_font_t</span></a> *       ezfc_font_new                       (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Create an instance of <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-ref"></a><h3>ezfc_font_ref ()</h3>
+<pre class="programlisting"><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="returnvalue">ezfc_font_t</span></a> *       ezfc_font_ref                       (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Increases the reference count of <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the same <em class="parameter"><code>font</code></em> object. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-remove"></a><h3>ezfc_font_remove ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_remove                    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Removes all of families in <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully completed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-remove-family"></a><h3>ezfc_font_remove_family ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_remove_family             (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *font_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Removes <em class="parameter"><code>font_name</code></em> from <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font_name</code></em> :</span></p></td>
+<td>a font name to be removed.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully completed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-remove-feature"></a><h3>ezfc_font_remove_feature ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_remove_feature            (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *feature</code></em>);</pre>
+<p>
+Remove <em class="parameter"><code>feature</code></em> from <em class="parameter"><code>font</code></em> if available.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>feature</code></em> :</span></p></td>
+<td>feature name to be removed</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully completed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-set-antialiasing"></a><h3>ezfc_font_set_antialiasing ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_font_set_antialiasing          (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);</pre>
+<p>
+Set a flag whether the font use the antialiasing.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flag</code></em> :</span></p></td>
+<td>a boolean value.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-set-autohinting"></a><h3>ezfc_font_set_autohinting ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_font_set_autohinting           (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);</pre>
+<p>
+Set a flag whether the font use the auto-hinting for rendering
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flag</code></em> :</span></p></td>
+<td>a boolean value.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-set-embedded-bitmap"></a><h3>ezfc_font_set_embedded_bitmap ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_font_set_embedded_bitmap       (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);</pre>
+<p>
+Set a flag whether the font use the embedded bitmap.
+Note that Enabling the embedded bitmap may causes disabling the antialias.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flag</code></em> :</span></p></td>
+<td>a boolean value.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-set-family"></a><h3>ezfc_font_set_family ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_set_family                (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *font_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">ezfc_font_set_family</code> is deprecated and should not be used in newly-written code. 0.11. Use <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-add-family" title="ezfc_font_add_family ()"><code class="function">ezfc_font_add_family()</code></a>.</p>
+</div>
+<p>
+Set <em class="parameter"><code>font_name</code></em> as the font family name used for the font font.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font_name</code></em> :</span></p></td>
+<td>a font name.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it successfully is set. otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-set-hinting"></a><h3>ezfc_font_set_hinting ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_font_set_hinting               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);</pre>
+<p>
+Set a flag whether the font use the own hints for rendering
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flag</code></em> :</span></p></td>
+<td>a boolean value.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-set-hintstyle"></a><h3>ezfc_font_set_hintstyle ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_font_set_hintstyle             (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-hintstyle-t" title="enum ezfc_font_hintstyle_t"><span class="type">ezfc_font_hintstyle_t</span></a> hintstyle</code></em>);</pre>
+<p>
+Set a hintstyle for <em class="parameter"><code>font</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>hintstyle</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-hintstyle-t" title="enum ezfc_font_hintstyle_t"><span class="type">ezfc_font_hintstyle_t</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-set-pattern"></a><h3>ezfc_font_set_pattern ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_set_pattern               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">FcPattern</span> *pattern</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Set <em class="parameter"><code>pattern</code></em> as the font pattern. <em class="parameter"><code>font</code></em> keeps a duplicate instance of
+<em class="parameter"><code>pattern</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pattern</code></em> :</span></p></td>
+<td>a <span class="type">FcPattern</span>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it successfully is set. otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-set-rgba"></a><h3>ezfc_font_set_rgba ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_font_set_rgba                  (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> val</code></em>);</pre>
+<p>
+Set <em class="parameter"><code>val</code></em> as the sub-pixel ordering
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>val</code></em> :</span></p></td>
+<td>an integer value corresponding to FC_RGBA_*.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-set-subpixel-rendering"></a><h3>ezfc_font_set_subpixel_rendering ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_font_set_subpixel_rendering    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-subpixel-render-t" title="enum ezfc_font_subpixel_render_t"><span class="type">ezfc_font_subpixel_render_t</span></a> mode</code></em>);</pre>
+<p>
+This is just convenient to change the several configuration for subpixel
+rendering.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mode</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-subpixel-render-t" title="enum ezfc_font_subpixel_render_t"><span class="type">ezfc_font_subpixel_render_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the sub-pixel rendering is enabled. otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-subpixel-render-t"></a><h3>enum ezfc_font_subpixel_render_t</h3>
+<pre class="programlisting">typedef enum {
+	EZFC_FONT_ANTIALIAS_UNKNOWN = 0,
+	EZFC_FONT_ANTIALIAS_NONE,
+	EZFC_FONT_ANTIALIAS_GRAY,
+	EZFC_FONT_ANTIALIAS_RGB,
+	EZFC_FONT_ANTIALIAS_BGR,
+	EZFC_FONT_ANTIALIAS_VRGB,
+	EZFC_FONT_ANTIALIAS_VBGR,
+	EZFC_FONT_ANTIALIAS_END
+} ezfc_font_subpixel_render_t;
+</pre>
+<p>
+The sub-pixel rendering option to be used in <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-set-subpixel-rendering" title="ezfc_font_set_subpixel_rendering ()"><code class="function">ezfc_font_set_subpixel_rendering()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><a name="EZFC-FONT-ANTIALIAS-UNKNOWN:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_ANTIALIAS_UNKNOWN</code></span></p></td>
+<td>unknown state on using the sub-pixel rendering.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-FONT-ANTIALIAS-NONE:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_ANTIALIAS_NONE</code></span></p></td>
+<td>no use of the sub-pixel rendering
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-FONT-ANTIALIAS-GRAY:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_ANTIALIAS_GRAY</code></span></p></td>
+<td>Use the gray-scaled sub-pixel rendering
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-FONT-ANTIALIAS-RGB:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_ANTIALIAS_RGB</code></span></p></td>
+<td>Use the sub-pixel rendering with the sub-pixel geometry RGB.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-FONT-ANTIALIAS-BGR:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_ANTIALIAS_BGR</code></span></p></td>
+<td>Use the sub-pixel rendering with the sub-pixel geometry BGR.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-FONT-ANTIALIAS-VRGB:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_ANTIALIAS_VRGB</code></span></p></td>
+<td>Use the sub-pixel rendering with the sub-pixel geometry VRGB.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-FONT-ANTIALIAS-VBGR:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_ANTIALIAS_VBGR</code></span></p></td>
+<td>Use the sub-pixel rendering with the sub-pixel geometry VBGR.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-FONT-ANTIALIAS-END:CAPS"></a><span class="term"><code class="literal">EZFC_FONT_ANTIALIAS_END</code></span></p></td>
+<td>No real value, but just a terminator.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-t"></a><h3>ezfc_font_t</h3>
+<pre class="programlisting">typedef struct _ezfc_font_t ezfc_font_t;</pre>
+<p>
+All the fields in the <span class="structname">ezfc_font_t</span>
+structure are private to the <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> implementation.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-font-unref"></a><h3>ezfc_font_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_font_unref                     (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Decreases the reference count of <em class="parameter"><code>font</code></em>. when its reference count
+drops to 0, the object is finalized (i.e. its memory is freed).
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19</div>
+</body>
+</html>

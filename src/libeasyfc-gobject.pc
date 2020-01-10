@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libeasyfc-gobject
+Description: Easy configuration generator interface for fontconfig
+Version: 0.13.0
+Requires: gobject-2.0 libeasyfc
+Libs: -L${libdir} -leasyfc-gobject

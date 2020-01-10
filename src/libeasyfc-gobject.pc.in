@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: libeasyfc-gobject
+Description: Easy configuration generator interface for fontconfig
+Version: @VERSION@
+Requires: gobject-2.0 libeasyfc
+Libs: -L${libdir} -leasyfc-gobject

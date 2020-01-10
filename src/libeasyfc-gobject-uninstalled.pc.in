@@ -1,0 +1,6 @@
+Name: libeasyfc-gobject Uninstalled
+Description: Easy configuration generator interface for fontconfig
+Version: @VERSION@
+Requires: gobject-2.0 libeazyfc
+Libs: ${pcfiledir}/libeasyfc-gobject/libeasyfc-gobject.la
+Cflags: -I${pcfiledir} -I${pcfiledir}/@srcdir@

@@ -1,0 +1,56 @@
+<!-- ##### SECTION Title ##### -->
+ezfc-error
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO EZFC_ERROR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION ezfc_error_get_quark ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### ENUM ezfc_error_t ##### -->
+<para>
+
+</para>
+
+@EZFC_ERR_UNKNOWN: 
+@EZFC_ERR_SUCCESS: 
+@EZFC_ERR_OOM: 
+@EZFC_ERR_FAIL_ON_FC: 
+@EZFC_ERR_NO_VALID_FONT: 
+@EZFC_ERR_NO_FAMILY: 
+@EZFC_ERR_NO_CONFIG_DIR: 
+@EZFC_ERR_NO_ELEMENTS: 
+@EZFC_ERR_NO_CONFIG_FILE: 
+@EZFC_ERR_FAIL_ON_XML: 
+@EZFC_ERR_FAIL_ON_LIBC: 
+@EZFC_ERR_END: 
+

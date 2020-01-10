@@ -1,0 +1,91 @@
+<!-- ##### SECTION Title ##### -->
+ezfc-utils
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO EZFC_DEPRECATED ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO EZFC_DEPRECATED_FOR ##### -->
+<para>
+
+</para>
+
+@f: 
+
+
+<!-- ##### FUNCTION ezfc_finalize ##### -->
+<para>
+
+</para>
+
+@void: 
+
+
+<!-- ##### FUNCTION ezfc_get_fonts_list ##### -->
+<para>
+
+</para>
+
+@language: 
+@alias_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_get_fonts_pattern_list ##### -->
+<para>
+
+</para>
+
+@language: 
+@alias_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_init ##### -->
+<para>
+
+</para>
+
+@void: 
+
+
+<!-- ##### FUNCTION ezfc_is_alias_font ##### -->
+<para>
+
+</para>
+
+@alias_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_version ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+

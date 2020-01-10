@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ezfc_alias_t</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="libeasyfc Documentation">
+<link rel="up" href="ch01.html" title="libeasyfc API References">
+<link rel="prev" href="ch01.html" title="libeasyfc API References">
+<link rel="next" href="libeasyfc-ezfc-config-t.html" title="ezfc_config_t">
+<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libeasyfc Documentation</th>
+<td><a accesskey="n" href="libeasyfc-ezfc-config-t.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libeasyfc-ezfc-alias-t.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libeasyfc-ezfc-alias-t.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libeasyfc-ezfc-alias-t"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libeasyfc-ezfc-alias-t.top_of_page"></a>ezfc_alias_t</span></h2>
+<p>ezfc_alias_t — A class for managing the alias font name.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libeasyfc-ezfc-alias-t.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-check-font-existence" title="ezfc_alias_check_font_existence ()">ezfc_alias_check_font_existence</a>     (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-get-font" title="ezfc_alias_get_font ()">ezfc_alias_get_font</a>                 (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>);
+<span class="returnvalue">FcPattern</span> *         <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-get-font-pattern" title="ezfc_alias_get_font_pattern ()">ezfc_alias_get_font_pattern</a>         (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-get-name" title="ezfc_alias_get_name ()">ezfc_alias_get_name</a>                 (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>);
+<a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="returnvalue">ezfc_alias_t</span></a> *      <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-new" title="ezfc_alias_new ()">ezfc_alias_new</a>                      (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);
+<a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="returnvalue">ezfc_alias_t</span></a> *      <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-ref" title="ezfc_alias_ref ()">ezfc_alias_ref</a>                      (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-set-font" title="ezfc_alias_set_font ()">ezfc_alias_set_font</a>                 (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *font_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-set-font-pattern" title="ezfc_alias_set_font_pattern ()">ezfc_alias_set_font_pattern</a>         (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">FcPattern</span> *pattern</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+                    <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t">ezfc_alias_t</a>;
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-unref" title="ezfc_alias_unref ()">ezfc_alias_unref</a>                    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="libeasyfc-ezfc-alias-t.description"></a><h2>Description</h2>
+<p>
+This class provides an easy access to the alias font name and the font
+that actually being assigned to it.
+</p>
+</div>
+<div class="refsect1">
+<a name="libeasyfc-ezfc-alias-t.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="ezfc-alias-check-font-existence"></a><h3>ezfc_alias_check_font_existence ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_alias_check_font_existence     (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);</pre>
+<p>
+Set a flag whether checking the font existence when invoking
+<a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-set-font" title="ezfc_alias_set_font ()"><code class="function">ezfc_alias_set_font()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flag</code></em> :</span></p></td>
+<td>a boolean value.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-alias-get-font"></a><h3>ezfc_alias_get_font ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       ezfc_alias_get_font                 (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>);</pre>
+<p>
+Obtains the font that is set as the alias font for <em class="parameter"><code>alias</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the font name.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-alias-get-font-pattern"></a><h3>ezfc_alias_get_font_pattern ()</h3>
+<pre class="programlisting"><span class="returnvalue">FcPattern</span> *         ezfc_alias_get_font_pattern         (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>);</pre>
+<p>
+Obtains <span class="type">FcPattern</span> in <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a duplicate of <span class="type">FcPattern</span> in the instance. it has to be freed.
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>alias</code></em> doesn't have any font pattern.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-alias-get-name"></a><h3>ezfc_alias_get_name ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       ezfc_alias_get_name                 (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>);</pre>
+<p>
+Obtains the alias font name in <em class="parameter"><code>alias</code></em> object.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the alias font name.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-alias-new"></a><h3>ezfc_alias_new ()</h3>
+<pre class="programlisting"><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="returnvalue">ezfc_alias_t</span></a> *      ezfc_alias_new                      (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);</pre>
+<p>
+Create an instance of <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias_name</code></em> :</span></p></td>
+<td>the alias font name like sans-serif, serif and monospace.
+This can be the usual font name. in this case, the font added by
+<a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-set-font" title="ezfc_alias_set_font ()"><code class="function">ezfc_alias_set_font()</code></a> behaves as the substitution font of it.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-alias-ref"></a><h3>ezfc_alias_ref ()</h3>
+<pre class="programlisting"><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="returnvalue">ezfc_alias_t</span></a> *      ezfc_alias_ref                      (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>);</pre>
+<p>
+Increases the reference count of <em class="parameter"><code>alias</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the same <em class="parameter"><code>alias</code></em>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-alias-set-font"></a><h3>ezfc_alias_set_font ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_alias_set_font                 (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *font_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Set <em class="parameter"><code>font_name</code></em> as the font family name used for the alias font.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font_name</code></em> :</span></p></td>
+<td>a font name.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it successfully is set. otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-alias-set-font-pattern"></a><h3>ezfc_alias_set_font_pattern ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_alias_set_font_pattern         (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">FcPattern</span> *pattern</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Set <em class="parameter"><code>pattern</code></em> as the font pattern. <em class="parameter"><code>alias</code></em> keeps a duplicate instance of
+<em class="parameter"><code>pattern</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pattern</code></em> :</span></p></td>
+<td>a <span class="type">FcPattern</span>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it successfully is set. otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-alias-t"></a><h3>ezfc_alias_t</h3>
+<pre class="programlisting">typedef struct _ezfc_alias_t ezfc_alias_t;</pre>
+<p>
+All the fields in the <span class="structname">ezfc_alias_t</span>
+structure are private to the <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> implementation.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-alias-unref"></a><h3>ezfc_alias_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_alias_unref                    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>);</pre>
+<p>
+Decreases the reference count of <em class="parameter"><code>alias</code></em>. When its reference count
+drops to 0, the object is finalized (i.e. its memory is freed).
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>alias</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19</div>
+</body>
+</html>

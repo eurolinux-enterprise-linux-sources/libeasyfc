@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ezfc_error_t</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="libeasyfc Documentation">
+<link rel="up" href="ch01.html" title="libeasyfc API References">
+<link rel="prev" href="libeasyfc-ezfc-config-t.html" title="ezfc_config_t">
+<link rel="next" href="libeasyfc-ezfc-font-t.html" title="ezfc_font_t">
+<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libeasyfc-ezfc-config-t.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libeasyfc Documentation</th>
+<td><a accesskey="n" href="libeasyfc-ezfc-font-t.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libeasyfc-ezfc-error-t.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libeasyfc-ezfc-error-t.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libeasyfc-ezfc-error-t"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libeasyfc-ezfc-error-t.top_of_page"></a>ezfc_error_t</span></h2>
+<p>ezfc_error_t — An enumerated type for error handling in libeasyfc.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libeasyfc-ezfc-error-t.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="libeasyfc-ezfc-error-t.html#EZFC-ERROR:CAPS" title="EZFC_ERROR">EZFC_ERROR</a>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>              <a class="link" href="libeasyfc-ezfc-error-t.html#ezfc-error-get-quark" title="ezfc_error_get_quark ()">ezfc_error_get_quark</a>                (<em class="parameter"><code><span class="type">void</span></code></em>);
+enum                <a class="link" href="libeasyfc-ezfc-error-t.html#ezfc-error-t" title="enum ezfc_error_t">ezfc_error_t</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="libeasyfc-ezfc-error-t.description"></a><h2>Description</h2>
+<p>
+This type defines an error type being used for <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.
+</p>
+</div>
+<div class="refsect1">
+<a name="libeasyfc-ezfc-error-t.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="EZFC-ERROR:CAPS"></a><h3>EZFC_ERROR</h3>
+<pre class="programlisting">#define EZFC_ERROR (ezfc_error_get_quark())
+</pre>
+<p>
+A <a href="http://library.gnome.org/devel/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a> value being used in libeasyfc.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-error-get-quark"></a><h3>ezfc_error_get_quark ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>              ezfc_error_get_quark                (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Obtains a <a href="http://library.gnome.org/devel/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a> being used for <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-error-t"></a><h3>enum ezfc_error_t</h3>
+<pre class="programlisting">typedef enum {
+	EZFC_ERR_UNKNOWN = -1,
+	EZFC_ERR_SUCCESS = 0,
+	EZFC_ERR_OOM,
+	EZFC_ERR_FAIL_ON_FC,
+	EZFC_ERR_NO_VALID_FONT,
+	EZFC_ERR_NO_FAMILY,
+	EZFC_ERR_NO_CONFIG_DIR,
+	EZFC_ERR_NO_ELEMENTS,
+	EZFC_ERR_NO_CONFIG_FILE,
+	EZFC_ERR_FAIL_ON_XML,
+	EZFC_ERR_FAIL_ON_LIBC,
+	EZFC_ERR_END
+} ezfc_error_t;
+</pre>
+<p>
+Error code used in libeasyfc.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><a name="EZFC-ERR-UNKNOWN:CAPS"></a><span class="term"><code class="literal">EZFC_ERR_UNKNOWN</code></span></p></td>
+<td>unknown error happened.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-ERR-SUCCESS:CAPS"></a><span class="term"><code class="literal">EZFC_ERR_SUCCESS</code></span></p></td>
+<td>an operation is succeeded.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-ERR-OOM:CAPS"></a><span class="term"><code class="literal">EZFC_ERR_OOM</code></span></p></td>
+<td>Out of memory occurred.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-ERR-FAIL-ON-FC:CAPS"></a><span class="term"><code class="literal">EZFC_ERR_FAIL_ON_FC</code></span></p></td>
+<td>an error happened in fontconfig.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-ERR-NO-VALID-FONT:CAPS"></a><span class="term"><code class="literal">EZFC_ERR_NO_VALID_FONT</code></span></p></td>
+<td>no valid font is available on the system.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-ERR-NO-FAMILY:CAPS"></a><span class="term"><code class="literal">EZFC_ERR_NO_FAMILY</code></span></p></td>
+<td>no font family name found in a class.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-ERR-NO-CONFIG-DIR:CAPS"></a><span class="term"><code class="literal">EZFC_ERR_NO_CONFIG_DIR</code></span></p></td>
+<td>no valid configuration directory found.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-ERR-NO-ELEMENTS:CAPS"></a><span class="term"><code class="literal">EZFC_ERR_NO_ELEMENTS</code></span></p></td>
+<td>no elements found to write.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-ERR-NO-CONFIG-FILE:CAPS"></a><span class="term"><code class="literal">EZFC_ERR_NO_CONFIG_FILE</code></span></p></td>
+<td>no configuration file was available on the filesystem.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-ERR-FAIL-ON-XML:CAPS"></a><span class="term"><code class="literal">EZFC_ERR_FAIL_ON_XML</code></span></p></td>
+<td>an error happened in libxml2.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-ERR-FAIL-ON-LIBC:CAPS"></a><span class="term"><code class="literal">EZFC_ERR_FAIL_ON_LIBC</code></span></p></td>
+<td>an error happened in libc.
+</td>
+</tr>
+<tr>
+<td><p><a name="EZFC-ERR-END:CAPS"></a><span class="term"><code class="literal">EZFC_ERR_END</code></span></p></td>
+<td>No real error, but just a terminator.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19</div>
+</body>
+</html>

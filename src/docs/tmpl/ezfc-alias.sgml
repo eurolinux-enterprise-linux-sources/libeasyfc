@@ -1,0 +1,112 @@
+<!-- ##### SECTION Title ##### -->
+ezfc-alias
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### FUNCTION ezfc_alias_check_font_existence ##### -->
+<para>
+
+</para>
+
+@alias: 
+@flag: 
+
+
+<!-- ##### FUNCTION ezfc_alias_get_font ##### -->
+<para>
+
+</para>
+
+@alias: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_alias_get_font_pattern ##### -->
+<para>
+
+</para>
+
+@alias: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_alias_get_name ##### -->
+<para>
+
+</para>
+
+@alias: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_alias_new ##### -->
+<para>
+
+</para>
+
+@alias_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_alias_ref ##### -->
+<para>
+
+</para>
+
+@alias: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_alias_set_font ##### -->
+<para>
+
+</para>
+
+@alias: 
+@font_name: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_alias_set_font_pattern ##### -->
+<para>
+
+</para>
+
+@alias: 
+@pattern: 
+@error: 
+@Returns: 
+
+
+<!-- ##### STRUCT ezfc_alias_t ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION ezfc_alias_unref ##### -->
+<para>
+
+</para>
+
+@alias: 
+
+

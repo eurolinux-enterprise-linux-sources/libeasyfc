@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="libeasyfc Documentation" link="index.html" author="" name="libeasyfc" version="2" language="c">
+  <chapters>
+    <sub name="libeasyfc API References" link="ch01.html">
+      <sub name="ezfc_alias_t" link="libeasyfc-ezfc-alias-t.html"/>
+      <sub name="ezfc_config_t" link="libeasyfc-ezfc-config-t.html"/>
+      <sub name="ezfc_error_t" link="libeasyfc-ezfc-error-t.html"/>
+      <sub name="ezfc_font_t" link="libeasyfc-ezfc-font-t.html"/>
+      <sub name="Utilities" link="libeasyfc-Utilities.html"/>
+    </sub>
+    <sub name="Object Hierarchy" link="object-tree.html"/>
+    <sub name="API Index" link="api-index-full.html"/>
+    <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+  </chapters>
+  <functions>
+    <keyword type="function" name="ezfc_alias_check_font_existence ()" link="libeasyfc-ezfc-alias-t.html#ezfc-alias-check-font-existence"/>
+    <keyword type="function" name="ezfc_alias_get_font ()" link="libeasyfc-ezfc-alias-t.html#ezfc-alias-get-font"/>
+    <keyword type="function" name="ezfc_alias_get_font_pattern ()" link="libeasyfc-ezfc-alias-t.html#ezfc-alias-get-font-pattern"/>
+    <keyword type="function" name="ezfc_alias_get_name ()" link="libeasyfc-ezfc-alias-t.html#ezfc-alias-get-name"/>
+    <keyword type="function" name="ezfc_alias_new ()" link="libeasyfc-ezfc-alias-t.html#ezfc-alias-new"/>
+    <keyword type="function" name="ezfc_alias_ref ()" link="libeasyfc-ezfc-alias-t.html#ezfc-alias-ref"/>
+    <keyword type="function" name="ezfc_alias_set_font ()" link="libeasyfc-ezfc-alias-t.html#ezfc-alias-set-font"/>
+    <keyword type="function" name="ezfc_alias_set_font_pattern ()" link="libeasyfc-ezfc-alias-t.html#ezfc-alias-set-font-pattern"/>
+    <keyword type="struct" name="ezfc_alias_t" link="libeasyfc-ezfc-alias-t.html#ezfc-alias-t"/>
+    <keyword type="function" name="ezfc_alias_unref ()" link="libeasyfc-ezfc-alias-t.html#ezfc-alias-unref"/>
+    <keyword type="function" name="ezfc_config_add_alias ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-add-alias"/>
+    <keyword type="function" name="ezfc_config_add_font ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-add-font"/>
+    <keyword type="function" name="ezfc_config_add_subst ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-add-subst" since="0.11"/>
+    <keyword type="function" name="ezfc_config_dump ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-dump"/>
+    <keyword type="function" name="ezfc_config_get_aliases ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-get-aliases"/>
+    <keyword type="function" name="ezfc_config_get_fonts ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-get-fonts"/>
+    <keyword type="function" name="ezfc_config_get_language_list ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-get-language-list"/>
+    <keyword type="function" name="ezfc_config_get_name ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-get-name"/>
+    <keyword type="function" name="ezfc_config_get_priority ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-get-priority"/>
+    <keyword type="function" name="ezfc_config_get_subst_family ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-get-subst-family" since="0.11"/>
+    <keyword type="function" name="ezfc_config_get_substs ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-get-substs" since="0.11"/>
+    <keyword type="function" name="ezfc_config_load ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-load"/>
+    <keyword type="function" name="ezfc_config_new ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-new"/>
+    <keyword type="function" name="ezfc_config_ref ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-ref"/>
+    <keyword type="function" name="ezfc_config_remove_alias ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-remove-alias"/>
+    <keyword type="function" name="ezfc_config_remove_aliases ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-remove-aliases"/>
+    <keyword type="function" name="ezfc_config_remove_font ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-remove-font"/>
+    <keyword type="function" name="ezfc_config_remove_fonts ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-remove-fonts"/>
+    <keyword type="function" name="ezfc_config_remove_subst ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-remove-subst" since="0.11"/>
+    <keyword type="function" name="ezfc_config_remove_substs ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-remove-substs" since="0.11"/>
+    <keyword type="function" name="ezfc_config_save ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-save"/>
+    <keyword type="function" name="ezfc_config_save_to_buffer ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-save-to-buffer"/>
+    <keyword type="function" name="ezfc_config_set_migration ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-set-migration" since="0.8"/>
+    <keyword type="function" name="ezfc_config_set_name ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-set-name"/>
+    <keyword type="function" name="ezfc_config_set_priority ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-set-priority"/>
+    <keyword type="struct" name="ezfc_config_t" link="libeasyfc-ezfc-config-t.html#ezfc-config-t"/>
+    <keyword type="function" name="ezfc_config_unref ()" link="libeasyfc-ezfc-config-t.html#ezfc-config-unref"/>
+    <keyword type="macro" name="EZFC_ERROR" link="libeasyfc-ezfc-error-t.html#EZFC-ERROR:CAPS"/>
+    <keyword type="function" name="ezfc_error_get_quark ()" link="libeasyfc-ezfc-error-t.html#ezfc-error-get-quark"/>
+    <keyword type="enum" name="enum ezfc_error_t" link="libeasyfc-ezfc-error-t.html#ezfc-error-t"/>
+    <keyword type="function" name="ezfc_font_add_family ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-add-family" since="0.11"/>
+    <keyword type="function" name="ezfc_font_add_feature ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-add-feature" since="0.12"/>
+    <keyword type="function" name="ezfc_font_canonicalize ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-canonicalize" since="0.11"/>
+    <keyword type="function" name="ezfc_font_check_existence ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-check-existence"/>
+    <keyword type="function" name="ezfc_font_find ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-find" since="0.11"/>
+    <keyword type="function" name="ezfc_font_get_alias_name_from_pattern ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-alias-name-from-pattern"/>
+    <keyword type="function" name="ezfc_font_get_antialiasing ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-antialiasing"/>
+    <keyword type="function" name="ezfc_font_get_autohinting ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-autohinting"/>
+    <keyword type="function" name="ezfc_font_get_available_features ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-available-features" since="0.12"/>
+    <keyword type="function" name="ezfc_font_get_embedded_bitmap ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-embedded-bitmap"/>
+    <keyword type="function" name="ezfc_font_get_families ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-families" since="0.11"/>
+    <keyword type="function" name="ezfc_font_get_family ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-family"/>
+    <keyword type="function" name="ezfc_font_get_features ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-features" since="0.12"/>
+    <keyword type="function" name="ezfc_font_get_hinting ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-hinting"/>
+    <keyword type="function" name="ezfc_font_get_hintstyle ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-hintstyle"/>
+    <keyword type="function" name="ezfc_font_get_list ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-list"/>
+    <keyword type="function" name="ezfc_font_get_pattern ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-pattern"/>
+    <keyword type="function" name="ezfc_font_get_pattern_list ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-pattern-list"/>
+    <keyword type="function" name="ezfc_font_get_rgba ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-rgba"/>
+    <keyword type="function" name="ezfc_font_get_subpixel_rendering ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-get-subpixel-rendering"/>
+    <keyword type="enum" name="enum ezfc_font_hintstyle_t" link="libeasyfc-ezfc-font-t.html#ezfc-font-hintstyle-t"/>
+    <keyword type="function" name="ezfc_font_is_alias_font ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-is-alias-font"/>
+    <keyword type="function" name="ezfc_font_new ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-new"/>
+    <keyword type="function" name="ezfc_font_ref ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-ref"/>
+    <keyword type="function" name="ezfc_font_remove ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-remove" since="0.11"/>
+    <keyword type="function" name="ezfc_font_remove_family ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-remove-family" since="0.11"/>
+    <keyword type="function" name="ezfc_font_remove_feature ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-remove-feature" since="0.12"/>
+    <keyword type="function" name="ezfc_font_set_antialiasing ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-set-antialiasing"/>
+    <keyword type="function" name="ezfc_font_set_autohinting ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-set-autohinting"/>
+    <keyword type="function" name="ezfc_font_set_embedded_bitmap ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-set-embedded-bitmap"/>
+    <keyword type="function" name="ezfc_font_set_family ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-set-family" deprecated="0.11. Use ezfc_font_add_family()."/>
+    <keyword type="function" name="ezfc_font_set_hinting ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-set-hinting"/>
+    <keyword type="function" name="ezfc_font_set_hintstyle ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-set-hintstyle"/>
+    <keyword type="function" name="ezfc_font_set_pattern ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-set-pattern"/>
+    <keyword type="function" name="ezfc_font_set_rgba ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-set-rgba"/>
+    <keyword type="function" name="ezfc_font_set_subpixel_rendering ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-set-subpixel-rendering"/>
+    <keyword type="enum" name="enum ezfc_font_subpixel_render_t" link="libeasyfc-ezfc-font-t.html#ezfc-font-subpixel-render-t"/>
+    <keyword type="struct" name="ezfc_font_t" link="libeasyfc-ezfc-font-t.html#ezfc-font-t"/>
+    <keyword type="function" name="ezfc_font_unref ()" link="libeasyfc-ezfc-font-t.html#ezfc-font-unref"/>
+    <keyword type="macro" name="EZFC_DEPRECATED" link="libeasyfc-Utilities.html#EZFC-DEPRECATED:CAPS"/>
+    <keyword type="macro" name="EZFC_DEPRECATED_FOR()" link="libeasyfc-Utilities.html#EZFC-DEPRECATED-FOR:CAPS"/>
+    <keyword type="function" name="ezfc_finalize ()" link="libeasyfc-Utilities.html#ezfc-finalize"/>
+    <keyword type="function" name="ezfc_get_fonts_list ()" link="libeasyfc-Utilities.html#ezfc-get-fonts-list" deprecated="0.7: Use ezfc_font_get_list()."/>
+    <keyword type="function" name="ezfc_get_fonts_pattern_list ()" link="libeasyfc-Utilities.html#ezfc-get-fonts-pattern-list" deprecated="0.7: Use ezfc_font_get_pattern_list()."/>
+    <keyword type="function" name="ezfc_init ()" link="libeasyfc-Utilities.html#ezfc-init"/>
+    <keyword type="function" name="ezfc_is_alias_font ()" link="libeasyfc-Utilities.html#ezfc-is-alias-font" deprecated="0.7: Use ezfc_font_is_alias_font()."/>
+    <keyword type="function" name="ezfc_version ()" link="libeasyfc-Utilities.html#ezfc-version"/>
+    <keyword type="constant" name="EZFC_ERR_UNKNOWN" link="libeasyfc-ezfc-error-t.html#EZFC-ERR-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="EZFC_ERR_SUCCESS" link="libeasyfc-ezfc-error-t.html#EZFC-ERR-SUCCESS:CAPS"/>
+    <keyword type="constant" name="EZFC_ERR_OOM" link="libeasyfc-ezfc-error-t.html#EZFC-ERR-OOM:CAPS"/>
+    <keyword type="constant" name="EZFC_ERR_FAIL_ON_FC" link="libeasyfc-ezfc-error-t.html#EZFC-ERR-FAIL-ON-FC:CAPS"/>
+    <keyword type="constant" name="EZFC_ERR_NO_VALID_FONT" link="libeasyfc-ezfc-error-t.html#EZFC-ERR-NO-VALID-FONT:CAPS"/>
+    <keyword type="constant" name="EZFC_ERR_NO_FAMILY" link="libeasyfc-ezfc-error-t.html#EZFC-ERR-NO-FAMILY:CAPS"/>
+    <keyword type="constant" name="EZFC_ERR_NO_CONFIG_DIR" link="libeasyfc-ezfc-error-t.html#EZFC-ERR-NO-CONFIG-DIR:CAPS"/>
+    <keyword type="constant" name="EZFC_ERR_NO_ELEMENTS" link="libeasyfc-ezfc-error-t.html#EZFC-ERR-NO-ELEMENTS:CAPS"/>
+    <keyword type="constant" name="EZFC_ERR_NO_CONFIG_FILE" link="libeasyfc-ezfc-error-t.html#EZFC-ERR-NO-CONFIG-FILE:CAPS"/>
+    <keyword type="constant" name="EZFC_ERR_FAIL_ON_XML" link="libeasyfc-ezfc-error-t.html#EZFC-ERR-FAIL-ON-XML:CAPS"/>
+    <keyword type="constant" name="EZFC_ERR_FAIL_ON_LIBC" link="libeasyfc-ezfc-error-t.html#EZFC-ERR-FAIL-ON-LIBC:CAPS"/>
+    <keyword type="constant" name="EZFC_ERR_END" link="libeasyfc-ezfc-error-t.html#EZFC-ERR-END:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_HINTSTYLE_UNKNOWN" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-HINTSTYLE-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_HINTSTYLE_NONE" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-HINTSTYLE-NONE:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_HINTSTYLE_SLIGHT" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-HINTSTYLE-SLIGHT:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_HINTSTYLE_MEDIUM" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-HINTSTYLE-MEDIUM:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_HINTSTYLE_FULL" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-HINTSTYLE-FULL:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_HINTSTYLE_END" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-HINTSTYLE-END:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_ANTIALIAS_UNKNOWN" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-ANTIALIAS-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_ANTIALIAS_NONE" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-ANTIALIAS-NONE:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_ANTIALIAS_GRAY" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-ANTIALIAS-GRAY:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_ANTIALIAS_RGB" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-ANTIALIAS-RGB:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_ANTIALIAS_BGR" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-ANTIALIAS-BGR:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_ANTIALIAS_VRGB" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-ANTIALIAS-VRGB:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_ANTIALIAS_VBGR" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-ANTIALIAS-VBGR:CAPS"/>
+    <keyword type="constant" name="EZFC_FONT_ANTIALIAS_END" link="libeasyfc-ezfc-font-t.html#EZFC-FONT-ANTIALIAS-END:CAPS"/>
+  </functions>
+</book>

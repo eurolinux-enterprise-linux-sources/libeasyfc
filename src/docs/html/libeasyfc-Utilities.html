@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Utilities</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="libeasyfc Documentation">
+<link rel="up" href="ch01.html" title="libeasyfc API References">
+<link rel="prev" href="libeasyfc-ezfc-font-t.html" title="ezfc_font_t">
+<link rel="next" href="object-tree.html" title="Object Hierarchy">
+<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libeasyfc-ezfc-font-t.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libeasyfc Documentation</th>
+<td><a accesskey="n" href="object-tree.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libeasyfc-Utilities.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libeasyfc-Utilities.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libeasyfc-Utilities"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libeasyfc-Utilities.top_of_page"></a>Utilities</span></h2>
+<p>Utilities — A collection of the utility functions</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libeasyfc-Utilities.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="libeasyfc-Utilities.html#EZFC-DEPRECATED:CAPS" title="EZFC_DEPRECATED">EZFC_DEPRECATED</a>
+#define             <a class="link" href="libeasyfc-Utilities.html#EZFC-DEPRECATED-FOR:CAPS" title="EZFC_DEPRECATED_FOR()">EZFC_DEPRECATED_FOR</a>                 (f)
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-Utilities.html#ezfc-finalize" title="ezfc_finalize ()">ezfc_finalize</a>                       (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="libeasyfc-Utilities.html#ezfc-get-fonts-list" title="ezfc_get_fonts_list ()">ezfc_get_fonts_list</a>                 (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="libeasyfc-Utilities.html#ezfc-get-fonts-pattern-list" title="ezfc_get_fonts_pattern_list ()">ezfc_get_fonts_pattern_list</a>         (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-Utilities.html#ezfc-init" title="ezfc_init ()">ezfc_init</a>                           (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-Utilities.html#ezfc-is-alias-font" title="ezfc_is_alias_font ()">ezfc_is_alias_font</a>                  (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="libeasyfc-Utilities.html#ezfc-version" title="ezfc_version ()">ezfc_version</a>                        (<em class="parameter"><code><span class="type">void</span></code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="libeasyfc-Utilities.description"></a><h2>Description</h2>
+<p>
+This collects some utility functions.
+</p>
+</div>
+<div class="refsect1">
+<a name="libeasyfc-Utilities.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="EZFC-DEPRECATED:CAPS"></a><h3>EZFC_DEPRECATED</h3>
+<pre class="programlisting">#define EZFC_DEPRECATED		G_GNUC_DEPRECATED
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="EZFC-DEPRECATED-FOR:CAPS"></a><h3>EZFC_DEPRECATED_FOR()</h3>
+<pre class="programlisting">#define EZFC_DEPRECATED_FOR(f) G_GNUC_DEPRECATED_FOR(f)
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-finalize"></a><h3>ezfc_finalize ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_finalize                       (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Finalize the library.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-get-fonts-list"></a><h3>ezfc_get_fonts_list ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             ezfc_get_fonts_list                 (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">ezfc_get_fonts_list</code> has been deprecated since version 0.7 and should not be used in newly-written code. Use <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-list" title="ezfc_font_get_list ()"><code class="function">ezfc_font_get_list()</code></a>.</p>
+</div>
+<p>
+Obtains the fonts list being assigned to <em class="parameter"><code>alias_name</code></em> for <em class="parameter"><code>language</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>language</code></em> :</span></p></td>
+<td>the language name fontconfig can deal with. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias_name</code></em> :</span></p></td>
+<td>the alias name to obtain the fonts list for. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> contains the font family name.
+if no valid families, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> then. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-get-fonts-pattern-list"></a><h3>ezfc_get_fonts_pattern_list ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             ezfc_get_fonts_pattern_list         (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">ezfc_get_fonts_pattern_list</code> has been deprecated since version 0.7 and should not be used in newly-written code. Use <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-get-pattern-list" title="ezfc_font_get_pattern_list ()"><code class="function">ezfc_font_get_pattern_list()</code></a>.</p>
+</div>
+<p>
+Obtains <span class="type">FcPattern</span> list being assigned to <em class="parameter"><code>alias_name</code></em> for <em class="parameter"><code>language</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>language</code></em> :</span></p></td>
+<td>the language name fontconfig can deal with. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias_name</code></em> :</span></p></td>
+<td>the alias name to obtain the fonts pettern list for. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> contains <span class="type">FcPattern</span>, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> FcPattern][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-init"></a><h3>ezfc_init ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_init                           (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Initialize the library.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-is-alias-font"></a><h3>ezfc_is_alias_font ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_is_alias_font                  (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">ezfc_is_alias_font</code> has been deprecated since version 0.7 and should not be used in newly-written code. Use <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-is-alias-font" title="ezfc_font_is_alias_font ()"><code class="function">ezfc_font_is_alias_font()</code></a>.</p>
+</div>
+<p>
+Checks if <em class="parameter"><code>alias_name</code></em> is one of sans-serif, serif, monospace, cursive or fantasy.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias_name</code></em> :</span></p></td>
+<td>the alias font name</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>alias_name</code></em> is an alias font name, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-version"></a><h3>ezfc_version ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       ezfc_version                        (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Obtain the version of libeasyfc.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a version string.</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19</div>
+</body>
+</html>

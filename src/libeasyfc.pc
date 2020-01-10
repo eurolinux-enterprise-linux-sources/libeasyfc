@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libeasyfc
+Description: Easy configuration generator interface for fontconfig
+Version: 0.13.0
+Requires: glib-2.0 fontconfig
+Libs: -L${libdir} -leasyfc

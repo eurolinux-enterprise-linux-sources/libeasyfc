@@ -1,0 +1,277 @@
+<!-- ##### SECTION Title ##### -->
+ezfc-config
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### FUNCTION ezfc_config_add_alias ##### -->
+<para>
+
+</para>
+
+@config: 
+@language: 
+@alias: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_add_font ##### -->
+<para>
+
+</para>
+
+@config: 
+@font: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_add_subst ##### -->
+<para>
+
+</para>
+
+@config: 
+@family_name: 
+@subst: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_dump ##### -->
+<para>
+
+</para>
+
+@config: 
+
+
+<!-- ##### FUNCTION ezfc_config_get_aliases ##### -->
+<para>
+
+</para>
+
+@config: 
+@language: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_get_fonts ##### -->
+<para>
+
+</para>
+
+@config: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_get_language_list ##### -->
+<para>
+
+</para>
+
+@config: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_get_name ##### -->
+<para>
+
+</para>
+
+@config: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_get_priority ##### -->
+<para>
+
+</para>
+
+@config: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_get_subst_family ##### -->
+<para>
+
+</para>
+
+@config: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_get_substs ##### -->
+<para>
+
+</para>
+
+@config: 
+@family_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_load ##### -->
+<para>
+
+</para>
+
+@config: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_ref ##### -->
+<para>
+
+</para>
+
+@config: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_remove_alias ##### -->
+<para>
+
+</para>
+
+@config: 
+@language: 
+@alias_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_remove_aliases ##### -->
+<para>
+
+</para>
+
+@config: 
+@language: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_remove_font ##### -->
+<para>
+
+</para>
+
+@config: 
+@family: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_remove_fonts ##### -->
+<para>
+
+</para>
+
+@config: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_remove_subst ##### -->
+<para>
+
+</para>
+
+@config: 
+@family_name: 
+@subst_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_remove_substs ##### -->
+<para>
+
+</para>
+
+@config: 
+@family_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_save ##### -->
+<para>
+
+</para>
+
+@config: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_save_to_buffer ##### -->
+<para>
+
+</para>
+
+@config: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_config_set_migration ##### -->
+<para>
+
+</para>
+
+@config: 
+@flag: 
+
+
+<!-- ##### FUNCTION ezfc_config_set_name ##### -->
+<para>
+
+</para>
+
+@config: 
+@name: 
+
+
+<!-- ##### FUNCTION ezfc_config_set_priority ##### -->
+<para>
+
+</para>
+
+@config: 
+@priority: 
+
+
+<!-- ##### STRUCT ezfc_config_t ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION ezfc_config_unref ##### -->
+<para>
+
+</para>
+
+@config: 
+
+

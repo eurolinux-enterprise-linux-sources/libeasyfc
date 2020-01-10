@@ -1,0 +1,394 @@
+<!-- ##### SECTION Title ##### -->
+ezfc-font
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### FUNCTION ezfc_font_add_family ##### -->
+<para>
+
+</para>
+
+@font: 
+@font_name: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_add_feature ##### -->
+<para>
+
+</para>
+
+@font: 
+@feature: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_canonicalize ##### -->
+<para>
+
+</para>
+
+@font: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_check_existence ##### -->
+<para>
+
+</para>
+
+@font: 
+@flag: 
+
+
+<!-- ##### FUNCTION ezfc_font_find ##### -->
+<para>
+
+</para>
+
+@font: 
+@font_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_alias_name_from_pattern ##### -->
+<para>
+
+</para>
+
+@pattern: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_antialiasing ##### -->
+<para>
+
+</para>
+
+@font: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_autohinting ##### -->
+<para>
+
+</para>
+
+@font: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_available_features ##### -->
+<para>
+
+</para>
+
+@font: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_embedded_bitmap ##### -->
+<para>
+
+</para>
+
+@font: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_families ##### -->
+<para>
+
+</para>
+
+@font: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_family ##### -->
+<para>
+
+</para>
+
+@font: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_features ##### -->
+<para>
+
+</para>
+
+@font: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_hinting ##### -->
+<para>
+
+</para>
+
+@font: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_hintstyle ##### -->
+<para>
+
+</para>
+
+@font: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_list ##### -->
+<para>
+
+</para>
+
+@language: 
+@alias_name: 
+@localized_font_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_pattern ##### -->
+<para>
+
+</para>
+
+@font: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_pattern_list ##### -->
+<para>
+
+</para>
+
+@language: 
+@alias_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_rgba ##### -->
+<para>
+
+</para>
+
+@font: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_get_subpixel_rendering ##### -->
+<para>
+
+</para>
+
+@font: 
+@Returns: 
+
+
+<!-- ##### ENUM ezfc_font_hintstyle_t ##### -->
+<para>
+
+</para>
+
+@EZFC_FONT_HINTSTYLE_UNKNOWN: 
+@EZFC_FONT_HINTSTYLE_NONE: 
+@EZFC_FONT_HINTSTYLE_SLIGHT: 
+@EZFC_FONT_HINTSTYLE_MEDIUM: 
+@EZFC_FONT_HINTSTYLE_FULL: 
+@EZFC_FONT_HINTSTYLE_END: 
+
+<!-- ##### FUNCTION ezfc_font_is_alias_font ##### -->
+<para>
+
+</para>
+
+@alias_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_ref ##### -->
+<para>
+
+</para>
+
+@font: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_remove ##### -->
+<para>
+
+</para>
+
+@font: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_remove_family ##### -->
+<para>
+
+</para>
+
+@font: 
+@font_name: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_remove_feature ##### -->
+<para>
+
+</para>
+
+@font: 
+@feature: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_set_antialiasing ##### -->
+<para>
+
+</para>
+
+@font: 
+@flag: 
+
+
+<!-- ##### FUNCTION ezfc_font_set_autohinting ##### -->
+<para>
+
+</para>
+
+@font: 
+@flag: 
+
+
+<!-- ##### FUNCTION ezfc_font_set_embedded_bitmap ##### -->
+<para>
+
+</para>
+
+@font: 
+@flag: 
+
+
+<!-- ##### FUNCTION ezfc_font_set_family ##### -->
+<para>
+
+</para>
+
+@font: 
+@font_name: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_set_hinting ##### -->
+<para>
+
+</para>
+
+@font: 
+@flag: 
+
+
+<!-- ##### FUNCTION ezfc_font_set_hintstyle ##### -->
+<para>
+
+</para>
+
+@font: 
+@hintstyle: 
+
+
+<!-- ##### FUNCTION ezfc_font_set_pattern ##### -->
+<para>
+
+</para>
+
+@font: 
+@pattern: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ezfc_font_set_rgba ##### -->
+<para>
+
+</para>
+
+@font: 
+@val: 
+
+
+<!-- ##### FUNCTION ezfc_font_set_subpixel_rendering ##### -->
+<para>
+
+</para>
+
+@font: 
+@mode: 
+@Returns: 
+
+
+<!-- ##### ENUM ezfc_font_subpixel_render_t ##### -->
+<para>
+
+</para>
+
+@EZFC_FONT_ANTIALIAS_UNKNOWN: 
+@EZFC_FONT_ANTIALIAS_NONE: 
+@EZFC_FONT_ANTIALIAS_GRAY: 
+@EZFC_FONT_ANTIALIAS_RGB: 
+@EZFC_FONT_ANTIALIAS_BGR: 
+@EZFC_FONT_ANTIALIAS_VRGB: 
+@EZFC_FONT_ANTIALIAS_VBGR: 
+@EZFC_FONT_ANTIALIAS_END: 
+
+<!-- ##### STRUCT ezfc_font_t ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION ezfc_font_unref ##### -->
+<para>
+
+</para>
+
+@font: 
+
+

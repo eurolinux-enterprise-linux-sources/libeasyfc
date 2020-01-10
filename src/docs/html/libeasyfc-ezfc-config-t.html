@@ -1,0 +1,854 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ezfc_config_t</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="libeasyfc Documentation">
+<link rel="up" href="ch01.html" title="libeasyfc API References">
+<link rel="prev" href="libeasyfc-ezfc-alias-t.html" title="ezfc_alias_t">
+<link rel="next" href="libeasyfc-ezfc-error-t.html" title="ezfc_error_t">
+<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libeasyfc-ezfc-alias-t.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libeasyfc Documentation</th>
+<td><a accesskey="n" href="libeasyfc-ezfc-error-t.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libeasyfc-ezfc-config-t.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libeasyfc-ezfc-config-t.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libeasyfc-ezfc-config-t"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libeasyfc-ezfc-config-t.top_of_page"></a>ezfc_config_t</span></h2>
+<p>ezfc_config_t — A class for managing the configuration file.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libeasyfc-ezfc-config-t.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-add-alias" title="ezfc_config_add_alias ()">ezfc_config_add_alias</a>               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-add-font" title="ezfc_config_add_font ()">ezfc_config_add_font</a>                (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-add-subst" title="ezfc_config_add_subst ()">ezfc_config_add_subst</a>               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *family_name</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *subst</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-dump" title="ezfc_config_dump ()">ezfc_config_dump</a>                    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *       <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-get-aliases" title="ezfc_config_get_aliases ()">ezfc_config_get_aliases</a>             (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-get-fonts" title="ezfc_config_get_fonts ()">ezfc_config_get_fonts</a>               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-get-language-list" title="ezfc_config_get_language_list ()">ezfc_config_get_language_list</a>       (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-get-name" title="ezfc_config_get_name ()">ezfc_config_get_name</a>                (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-get-priority" title="ezfc_config_get_priority ()">ezfc_config_get_priority</a>            (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-get-subst-family" title="ezfc_config_get_subst_family ()">ezfc_config_get_subst_family</a>        (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *       <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-get-substs" title="ezfc_config_get_substs ()">ezfc_config_get_substs</a>              (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *family_name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-load" title="ezfc_config_load ()">ezfc_config_load</a>                    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="returnvalue">ezfc_config_t</span></a> *     <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-new" title="ezfc_config_new ()">ezfc_config_new</a>                     (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="returnvalue">ezfc_config_t</span></a> *     <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-ref" title="ezfc_config_ref ()">ezfc_config_ref</a>                     (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-remove-alias" title="ezfc_config_remove_alias ()">ezfc_config_remove_alias</a>            (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-remove-aliases" title="ezfc_config_remove_aliases ()">ezfc_config_remove_aliases</a>          (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-remove-font" title="ezfc_config_remove_font ()">ezfc_config_remove_font</a>             (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *family</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-remove-fonts" title="ezfc_config_remove_fonts ()">ezfc_config_remove_fonts</a>            (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-remove-subst" title="ezfc_config_remove_subst ()">ezfc_config_remove_subst</a>            (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *family_name</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *subst_name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-remove-substs" title="ezfc_config_remove_substs ()">ezfc_config_remove_substs</a>           (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *family_name</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-save" title="ezfc_config_save ()">ezfc_config_save</a>                    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Strings.html#GString"><span class="returnvalue">GString</span></a> *           <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-save-to-buffer" title="ezfc_config_save_to_buffer ()">ezfc_config_save_to_buffer</a>          (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-set-migration" title="ezfc_config_set_migration ()">ezfc_config_set_migration</a>           (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-set-name" title="ezfc_config_set_name ()">ezfc_config_set_name</a>                (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-set-priority" title="ezfc_config_set_priority ()">ezfc_config_set_priority</a>            (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> priority</code></em>);
+                    <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t">ezfc_config_t</a>;
+<span class="returnvalue">void</span>                <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-unref" title="ezfc_config_unref ()">ezfc_config_unref</a>                   (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="libeasyfc-ezfc-config-t.description"></a><h2>Description</h2>
+<p>
+This class provides an easy access to assign an instance of <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a>
+to a language and to read/write the configuration file.
+</p>
+</div>
+<div class="refsect1">
+<a name="libeasyfc-ezfc-config-t.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="ezfc-config-add-alias"></a><h3>ezfc_config_add_alias ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_config_add_alias               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> *alias</code></em>);</pre>
+<p>
+Add a <em class="parameter"><code>alias</code></em> font for <em class="parameter"><code>language</code></em> language. if giving <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to <em class="parameter"><code>language</code></em>,
+<em class="parameter"><code>alias</code></em> takes effect for any languages.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>language</code></em> :</span></p></td>
+<td>a language name to add <em class="parameter"><code>alias</code></em> for or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for global settings. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully completed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-add-font"></a><h3>ezfc_config_add_font ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_config_add_font                (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *font</code></em>);</pre>
+<p>
+Add a <span class="type">font</span> font to generate non-language-specific, non-alias-specific
+rules.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>font</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully completed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-add-subst"></a><h3>ezfc_config_add_subst ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_config_add_subst               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *family_name</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> *subst</code></em>);</pre>
+<p>
+Add a <span class="type">subst</span> font as a substitute font for <em class="parameter"><code>family_name</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>family_name</code></em> :</span></p></td>
+<td>a family name to be substituted.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>subst</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> for substitute font</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully completed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-dump"></a><h3>ezfc_config_dump ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_config_dump                    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);</pre>
+<p>
+Output the object data to the standard output.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-get-aliases"></a><h3>ezfc_config_get_aliases ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *       ezfc_config_get_aliases             (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>);</pre>
+<p>
+Obtains the list of <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> in <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> instance.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>language</code></em> :</span></p></td>
+<td>a language name referenced to the alias. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> contains <a class="link" href="libeasyfc-ezfc-alias-t.html#ezfc-alias-t" title="ezfc_alias_t"><span class="type">ezfc_alias_t</span></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ezfc_alias_t][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-get-fonts"></a><h3>ezfc_config_get_fonts ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             ezfc_config_get_fonts               (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);</pre>
+<p>
+Obtains the list of <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> in <em class="parameter"><code>config</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> contains <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ezfc_font_t][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-get-language-list"></a><h3>ezfc_config_get_language_list ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             ezfc_config_get_language_list       (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);</pre>
+<p>
+Obtains the list of languages registered by <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-add-alias" title="ezfc_config_add_alias ()"><code class="function">ezfc_config_add_alias()</code></a> in <em class="parameter"><code>config</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> contains languages or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-get-name"></a><h3>ezfc_config_get_name ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       ezfc_config_get_name                (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);</pre>
+<p>
+Obtains the configuration name that is set by <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-set-name" title="ezfc_config_set_name ()"><code class="function">ezfc_config_set_name()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the configuration name.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-get-priority"></a><h3>ezfc_config_get_priority ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                ezfc_config_get_priority            (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);</pre>
+<p>
+Obtains the priority number in <em class="parameter"><code>config</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the priority number. if any errors happens, returns -1.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-get-subst-family"></a><h3>ezfc_config_get_subst_family ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             ezfc_config_get_subst_family        (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);</pre>
+<p>
+Obtains the list of the family name being substituted
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> contains languages or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-get-substs"></a><h3>ezfc_config_get_substs ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *       ezfc_config_get_substs              (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *family_name</code></em>);</pre>
+<p>
+Obtains the list of <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> to be substituted for <em class="parameter"><code>family_name</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>family_name</code></em> :</span></p></td>
+<td>a family name being substituted.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> contains <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ezfc_font_t][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-load"></a><h3>ezfc_config_load ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_config_load                    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Read the configuration file and rebuild the object.
+You have to invoke <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-set-priority" title="ezfc_config_set_priority ()"><code class="function">ezfc_config_set_priority()</code></a> and <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-set-name" title="ezfc_config_set_name ()"><code class="function">ezfc_config_set_name()</code></a>
+first to read the appropriate configuration file.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully completed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-new"></a><h3>ezfc_config_new ()</h3>
+<pre class="programlisting"><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="returnvalue">ezfc_config_t</span></a> *     ezfc_config_new                     (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Create a new instance of a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new instance of <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-ref"></a><h3>ezfc_config_ref ()</h3>
+<pre class="programlisting"><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="returnvalue">ezfc_config_t</span></a> *     ezfc_config_ref                     (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);</pre>
+<p>
+Increases the refernce count of <em class="parameter"><code>config</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the same <em class="parameter"><code>config</code></em> object. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-remove-alias"></a><h3>ezfc_config_remove_alias ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_config_remove_alias            (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alias_name</code></em>);</pre>
+<p>
+Removes <em class="parameter"><code>alias_name</code></em> assigned for <em class="parameter"><code>language</code></em> language from <em class="parameter"><code>config</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>language</code></em> :</span></p></td>
+<td>a language name to remove <em class="parameter"><code>alias_name</code></em> from. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alias_name</code></em> :</span></p></td>
+<td>a alias font name to remove.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully removed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-remove-aliases"></a><h3>ezfc_config_remove_aliases ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_config_remove_aliases          (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *language</code></em>);</pre>
+<p>
+Removes all of aliases assigned for <em class="parameter"><code>language</code></em> language from <em class="parameter"><code>config</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>language</code></em> :</span></p></td>
+<td>a language name to remove <em class="parameter"><code>alias_name</code></em> from. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully removed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-remove-font"></a><h3>ezfc_config_remove_font ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_config_remove_font             (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *family</code></em>);</pre>
+<p>
+Remove a <a class="link" href="libeasyfc-ezfc-font-t.html#ezfc-font-t" title="ezfc_font_t"><span class="type">ezfc_font_t</span></a> instance corresponding to <em class="parameter"><code>family</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>family</code></em> :</span></p></td>
+<td>a family name to be removed.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully removed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-remove-fonts"></a><h3>ezfc_config_remove_fonts ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_config_remove_fonts            (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);</pre>
+<p>
+Remove all of fonts from <em class="parameter"><code>config</code></em>, which added by <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-add-font" title="ezfc_config_add_font ()"><code class="function">ezfc_config_add_font()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully removed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-remove-subst"></a><h3>ezfc_config_remove_subst ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_config_remove_subst            (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *family_name</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *subst_name</code></em>);</pre>
+<p>
+Remove <em class="parameter"><code>subst_name</code></em> from the substitute font list of <em class="parameter"><code>family_name</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>family_name</code></em> :</span></p></td>
+<td>a family name to be substituted.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>subst_name</code></em> :</span></p></td>
+<td>a substitute font name</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully completed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-remove-substs"></a><h3>ezfc_config_remove_substs ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_config_remove_substs           (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *family_name</code></em>);</pre>
+<p>
+Remove all of substitute font list of <em class="parameter"><code>family_name</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>family_name</code></em> :</span></p></td>
+<td>a family name to be substituted.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully completed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-save"></a><h3>ezfc_config_save ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            ezfc_config_save                    (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Write the data to the configuration file. you may want to invoke
+<a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-set-priority" title="ezfc_config_set_priority ()"><code class="function">ezfc_config_set_priority()</code></a> and <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-set-name" title="ezfc_config_set_name ()"><code class="function">ezfc_config_set_name()</code></a> first to
+write it to the appropriate configuration file.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if it's successfully completed, otherwise <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-save-to-buffer"></a><h3>ezfc_config_save_to_buffer ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Strings.html#GString"><span class="returnvalue">GString</span></a> *           ezfc_config_save_to_buffer          (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Write the data to the buffer.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Strings.html#GString"><span class="type">GString</span></a> containing a xml data. <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if fails.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-set-migration"></a><h3>ezfc_config_set_migration ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_config_set_migration           (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> flag</code></em>);</pre>
+<p>
+Set a flag to migrate the configuration file on the older place to
+the new one where XDG Base Directory Specification defines.
+If <em class="parameter"><code>flag</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-load" title="ezfc_config_load ()"><code class="function">ezfc_config_load()</code></a> will tries to read the config
+file from the old path prior to new place and the old file will be
+removed during <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-save" title="ezfc_config_save ()"><code class="function">ezfc_config_save()</code></a>.
+</p>
+<p>
+This feature is enabled by default.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flag</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-set-name"></a><h3>ezfc_config_set_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_config_set_name                (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>
+Set <em class="parameter"><code>name</code></em> as the additional configuration name. this is an optional to
+make the change in the filename for output.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>additional configuration name. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-set-priority"></a><h3>ezfc_config_set_priority ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_config_set_priority            (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> priority</code></em>);</pre>
+<p>
+Set <em class="parameter"><code>priority</code></em> to <em class="parameter"><code>config</code></em> instance.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>priority</code></em> :</span></p></td>
+<td>a priority number that is used for a filename. it has to be
+within 3 digits. so the maximum value is 999.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-t"></a><h3>ezfc_config_t</h3>
+<pre class="programlisting">typedef struct _ezfc_config_t ezfc_config_t;</pre>
+<p>
+All the fields in the <span class="structname">ezfc_config_t</span>
+structure are private to the <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> implementation.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ezfc-config-unref"></a><h3>ezfc_config_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                ezfc_config_unref                   (<em class="parameter"><code><a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a> *config</code></em>);</pre>
+<p>
+Decreases the reference count of <em class="parameter"><code>config</code></em>. when its reference count
+drops to 0, the object is finalized (i.e. its memory is freed).
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>config</code></em> :</span></p></td>
+<td>a <a class="link" href="libeasyfc-ezfc-config-t.html#ezfc-config-t" title="ezfc_config_t"><span class="type">ezfc_config_t</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19</div>
+</body>
+</html>
