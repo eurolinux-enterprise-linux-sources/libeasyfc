@@ -1,6 +1,6 @@
 Name:		libeasyfc
 Version:	0.13.0
-Release:	1%{?dist}
+Release:	3%{?dist}
 Summary:	Easy configuration generator interface for fontconfig
 
 Group:		System Environment/Libraries
@@ -98,6 +98,12 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 %{_datadir}/gir-*/Easyfc-*.gir
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 0.13.0-3
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.13.0-2
+- Mass rebuild 2013-12-27
+
 * Tue Jul 30 2013 Akira TAGOH <tagoh@redhat.com> - 0.13.0-1
 - New upstream release.
 
